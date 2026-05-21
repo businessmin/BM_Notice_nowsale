@@ -1,17 +1,17 @@
 <div id="bms">
 <style>
-#bms{font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;max-width:600px;margin:0 auto;padding:16px 4px;box-sizing:border-box;}
+#bms{font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;max-width:600px;margin:0 auto;padding:16px 4px;box-sizing:border-box;font-size:15px;}
 #bms *{box-sizing:border-box;margin:0;padding:0;}
 #bms input[type=radio]{position:absolute;opacity:0;pointer-events:none;}
 
 /* 1단계 버튼 */
 #bms .bms-step1{display:flex;gap:8px;margin-bottom:8px;}
-#bms .bms-step1 label{flex:1;display:block;padding:13px 14px;border-radius:10px;border:1.5px solid #e0e0e0;font-size:13px;font-weight:600;color:#aaa;cursor:pointer;background:#fff;transition:all .15s;line-height:1.5;}
-#bms .bms-step1 label span{display:block;font-size:11px;font-weight:500;color:#888;margin-top:3px;}
+#bms .bms-step1 label{flex:1;display:block;padding:13px 14px;border-radius:10px;border:1.5px solid #e0e0e0;font-size:15px;font-weight:600;color:#aaa;cursor:pointer;background:#fff;transition:all .15s;line-height:1.5;}
+#bms .bms-step1 label span{display:block;font-size:12px;font-weight:500;color:#888;margin-top:3px;}
 
 /* 2단계 서브탭 */
 #bms .bms-step2{display:none;flex-direction:row;gap:6px;margin-bottom:12px;padding:10px 12px;background:#f5f5f5;border-radius:10px;}
-#bms .bms-step2 label{flex:1;display:block;padding:8px 10px;border-radius:8px;border:1px solid #e0e0e0;font-size:12px;font-weight:500;color:#aaa;cursor:pointer;text-align:center;background:#fff;transition:all .15s;}
+#bms .bms-step2 label{flex:1;display:block;padding:8px 10px;border-radius:8px;border:1px solid #e0e0e0;font-size:14px;font-weight:500;color:#aaa;cursor:pointer;text-align:center;background:#fff;transition:all .15s;}
 
 /* 패널 */
 #bms .bms-panel{display:none;}
@@ -22,7 +22,7 @@
 #bms .bms-setup-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:4px;margin-bottom:2px;}
 #bms .bms-setup-badge.store{background:#fff0e0;color:#b85c00;border:1px solid #fcd9a8;}
 #bms .bms-setup-badge.order{background:#e8f4ff;color:#1a5fa8;border:1px solid #b3d4f5;}
-#bms .bms-setup-vals{font-size:13px;color:#333;line-height:1.7;padding-left:2px;}
+#bms .bms-setup-vals{font-size:14px;color:#333;line-height:1.7;padding-left:2px;}
 #bms .bms-setup-vals strong{font-weight:700;color:#1a1a1a;}
 
 /* 비교 박스 */
@@ -35,23 +35,26 @@
 #bms .bms-box.after .bms-box-head{color:#00915a;}
 #bms .bms-row{display:flex;justify-content:space-between;align-items:center;min-height:42px;padding:4px 0;border-bottom:1px solid rgba(0,0,0,.07);}
 #bms .bms-row:last-of-type{border-bottom:none;}
-#bms .bms-rname{font-size:12px;color:#999;white-space:nowrap;}
+#bms .bms-rname{font-size:14px;color:#999;white-space:nowrap;}
 #bms .bms-rright{text-align:right;}
-#bms .bms-rval{font-size:13px;font-weight:700;color:#1a1a1a;display:block;}
-#bms .bms-rsub{font-size:10px;color:#888;display:block;margin-top:2px;}
+#bms .bms-rval{font-size:15px;font-weight:700;color:#1a1a1a;display:block;}
+#bms .bms-rsub{font-size:12px;color:#888;display:block;margin-top:2px;}
 
 /* 배달팁 0원 강조 */
 #bms .bms-zero-wrap{display:inline-flex;flex-direction:column;align-items:flex-end;gap:3px;}
-#bms .bms-zero{font-size:16px;font-weight:900;color:#fff;background:#00a85e;padding:2px 10px;border-radius:6px;display:inline-block;}
-#bms .bms-zero-sub{font-size:10px;color:#3aaa7a;display:block;text-align:right;}
+#bms .bms-zero{font-size:18px;font-weight:900;color:#fff;background:#00a85e;padding:3px 12px;border-radius:6px;display:inline-block;}
+#bms .bms-zero-sub{font-size:12px;color:#3aaa7a;display:block;text-align:right;}
 
 #bms .bms-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;padding-top:10px;border-top:1.5px solid #e8e8e8;}
 #bms .bms-box.after .bms-total{border-top-color:#b2e8d0;}
-#bms .bms-tlabel{font-size:11px;color:#aaa;}
-#bms .bms-tval{font-size:16px;font-weight:800;color:#1a1a1a;}
-#bms .bms-note{font-size:12px;color:#444;font-weight:600;padding:11px 13px;background:#f9f9f9;border-radius:8px;border-left:3px solid #d8d8d8;line-height:1.9;}
-#bms .bms-note ol{padding-left:16px;margin-top:5px;}
-#bms .bms-note li{margin-bottom:2px;}
+#bms .bms-tlabel{font-size:13px;color:#aaa;}
+#bms .bms-tval{font-size:18px;font-weight:800;color:#1a1a1a;}
+#bms .bms-note{font-size:13px;color:#444;font-weight:600;padding:12px 14px;background:#f9f9f9;border-radius:8px;border-left:3px solid #d8d8d8;line-height:2.0;}
+#bms .bms-note ol{list-style:none;padding-left:0;margin-top:6px;}
+#bms .bms-note li{margin-bottom:4px;display:flex;align-items:flex-start;gap:5px;}
+#bms .bms-num{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;background:#d8eeff;color:#1a6ec7;border-radius:50%;font-size:11px;font-weight:700;margin-top:2px;flex-shrink:0;}
+#bms .bms-row-num{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;background:#d8eeff;color:#1a6ec7;border-radius:50%;font-size:10px;font-weight:700;flex-shrink:0;}
+#bms .bms-rname-wrap{display:flex;align-items:center;gap:4px;}
 
 @media(max-width:460px){
   #bms .bms-step1{flex-direction:column;}
@@ -125,12 +128,12 @@
       </div>
       <div class="bms-box after">
         <div class="bms-box-head">변경 후</div>
-        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 2,000</span></div></div></div>
-        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">19,000원</span><span class="bms-rsub">20,000 - 1,000</span></div></div>
+        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 2,000<span class="bms-row-num">①</span></span></div></div></div>
+        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">19,000원</span><span class="bms-rsub">20,000 - 1,000<span class="bms-row-num">②</span></span></div></div>
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">19,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">총 할인금액 3,000원은 동일해요.<br>변경 후에는 할인금액이 배달팁(2,000원)에 먼저 적용되고, 남은 할인금액(1,000원)이 주문금액에서 차감돼요.</div>
+    <div class="bms-note">총 할인금액 3,000원은 동일<br>변경 후 할인 적용 순서<ol><li><span class="bms-num">①</span>모든주문금액 할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 모든주문금액 할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
   </div>
 
   <div class="bms-panel bms-p1b">
@@ -147,12 +150,12 @@
       </div>
       <div class="bms-box after">
         <div class="bms-box-head">변경 후</div>
-        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 2,000</span></div></div></div>
-        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">19,000원</span><span class="bms-rsub">20,000 - 1,000</span></div></div>
+        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 2,000<span class="bms-row-num">①</span></span></div></div></div>
+        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">19,000원</span><span class="bms-rsub">20,000 - 1,000<span class="bms-row-num">②</span></span></div></div>
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">19,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">총 할인금액 3,000원은 동일해요. (20,000원의 15%)<br>변경 후에는 할인금액이 배달팁(2,000원)에 먼저 적용되고, 남은 할인금액(1,000원)이 주문금액에서 차감돼요.</div>
+    <div class="bms-note">총 할인금액 3,000원은 동일 (20,000원의 15%)<br>변경 후 할인 적용 순서<ol><li><span class="bms-num">①</span>모든주문금액 할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 모든주문금액 할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
   </div>
 
   <div class="bms-panel bms-p2a">
@@ -169,12 +172,12 @@
       </div>
       <div class="bms-box after">
         <div class="bms-box-head">변경 후</div>
-        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 1,000 - 1,000</span></div></div></div>
-        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">18,000원</span><span class="bms-rsub">20,000 - 2,000</span></div></div>
+        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 1,000<span class="bms-row-num">①</span> - 1,000<span class="bms-row-num">②</span></span></div></div></div>
+        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">18,000원</span><span class="bms-rsub">20,000 - 2,000<span class="bms-row-num">③</span></span></div></div>
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">18,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">변경 후 할인 적용 순서:<ol><li>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li>모든주문금액 할인이 남은 배달팁에 차감 적용 (1,000원)</li><li>나머지 모든주문금액 할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
+    <div class="bms-note">변경 후 할인 적용 순서<ol><li><span class="bms-num">①</span>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li><span class="bms-num">②</span>모든주문금액 할인이 남은 배달팁에 차감 적용 (1,000원)</li><li><span class="bms-num">③</span>나머지 모든주문금액 할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
   </div>
 
   <div class="bms-panel bms-p2b">
@@ -191,12 +194,12 @@
       </div>
       <div class="bms-box after">
         <div class="bms-box-head">변경 후</div>
-        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 1,000 - 1,000</span></div></div></div>
-        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">18,000원</span><span class="bms-rsub">20,000 - 2,000</span></div></div>
+        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 1,000<span class="bms-row-num">①</span> - 1,000<span class="bms-row-num">②</span></span></div></div></div>
+        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">18,000원</span><span class="bms-rsub">20,000 - 2,000<span class="bms-row-num">③</span></span></div></div>
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">18,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">모든주문금액 할인금액 3,000원은 동일해요. (20,000원의 15%)<br><br>변경 후 할인 적용 순서:<ol><li>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li>모든주문금액 할인이 남은 배달팁에 차감 적용 (1,000원)</li><li>나머지 모든주문금액 할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
+    <div class="bms-note">모든주문금액 할인은 3,000원으로 동일 (20,000원의 15%)<br><br>변경 후 할인 적용 순서<ol><li><span class="bms-num">①</span>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li><span class="bms-num">②</span>모든주문금액 할인이 남은 배달팁에 차감 적용 (1,000원)</li><li><span class="bms-num">③</span>나머지 모든주문금액 할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
   </div>
 
 </div>
