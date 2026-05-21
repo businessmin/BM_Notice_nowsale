@@ -3,19 +3,19 @@
 #bms{font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;max-width:600px;margin:0 auto;padding:16px 4px;box-sizing:border-box;}
 #bms *{box-sizing:border-box;margin:0;padding:0;}
 #bms input[type=radio]{position:absolute;opacity:0;pointer-events:none;}
- 
+
 /* 1단계 버튼 */
 #bms .bms-step1{display:flex;gap:8px;margin-bottom:8px;}
 #bms .bms-step1 label{flex:1;display:block;padding:13px 14px;border-radius:10px;border:1.5px solid #e0e0e0;font-size:13px;font-weight:600;color:#aaa;cursor:pointer;background:#fff;transition:all .15s;line-height:1.5;}
-#bms .bms-step1 label span{display:block;font-size:11px;font-weight:400;color:#ccc;margin-top:3px;}
- 
+#bms .bms-step1 label span{display:block;font-size:11px;font-weight:500;color:#888;margin-top:3px;}
+
 /* 2단계 서브탭 */
 #bms .bms-step2{display:none;flex-direction:row;gap:6px;margin-bottom:12px;padding:10px 12px;background:#f5f5f5;border-radius:10px;}
 #bms .bms-step2 label{flex:1;display:block;padding:8px 10px;border-radius:8px;border:1px solid #e0e0e0;font-size:12px;font-weight:500;color:#aaa;cursor:pointer;text-align:center;background:#fff;transition:all .15s;}
- 
+
 /* 패널 */
 #bms .bms-panel{display:none;}
- 
+
 /* 가게설정/주문 */
 #bms .bms-setup{background:#fafafa;border:1px solid #efefef;border-radius:10px;padding:12px 14px;margin-bottom:14px;display:flex;flex-direction:column;gap:10px;}
 #bms .bms-setup-row{display:flex;flex-direction:column;gap:3px;}
@@ -24,7 +24,7 @@
 #bms .bms-setup-badge.order{background:#e8f4ff;color:#1a5fa8;border:1px solid #b3d4f5;}
 #bms .bms-setup-vals{font-size:13px;color:#333;line-height:1.7;padding-left:2px;}
 #bms .bms-setup-vals strong{font-weight:700;color:#1a1a1a;}
- 
+
 /* 비교 박스 */
 #bms .bms-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
 #bms .bms-box{border-radius:10px;padding:12px 13px;}
@@ -38,13 +38,13 @@
 #bms .bms-rname{font-size:12px;color:#999;white-space:nowrap;}
 #bms .bms-rright{text-align:right;}
 #bms .bms-rval{font-size:13px;font-weight:700;color:#1a1a1a;display:block;}
-#bms .bms-rsub{font-size:10px;color:#bbb;display:block;margin-top:2px;}
- 
+#bms .bms-rsub{font-size:10px;color:#888;display:block;margin-top:2px;}
+
 /* 배달팁 0원 강조 */
 #bms .bms-zero-wrap{display:inline-flex;flex-direction:column;align-items:flex-end;gap:3px;}
 #bms .bms-zero{font-size:16px;font-weight:900;color:#fff;background:#00a85e;padding:2px 10px;border-radius:6px;display:inline-block;}
-#bms .bms-zero-sub{font-size:10px;color:#99d4bb;display:block;text-align:right;}
- 
+#bms .bms-zero-sub{font-size:10px;color:#3aaa7a;display:block;text-align:right;}
+
 #bms .bms-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;padding-top:10px;border-top:1.5px solid #e8e8e8;}
 #bms .bms-box.after .bms-total{border-top-color:#b2e8d0;}
 #bms .bms-tlabel{font-size:11px;color:#aaa;}
@@ -52,54 +52,54 @@
 #bms .bms-note{font-size:12px;color:#777;padding:11px 13px;background:#f9f9f9;border-radius:8px;border-left:3px solid #d8d8d8;line-height:1.9;}
 #bms .bms-note ol{padding-left:16px;margin-top:5px;}
 #bms .bms-note li{margin-bottom:2px;}
- 
+
 @media(max-width:460px){
   #bms .bms-step1{flex-direction:column;}
   #bms .bms-compare{grid-template-columns:1fr;}
 }
- 
+
 /* ── 활성 상태 (파스텔 블루) ── */
 /* 예시1 버튼 */
 #bms:has(#r-e1a:checked) .lbl-e1,
 #bms:has(#r-e1b:checked) .lbl-e1{background:#dceeff;color:#1a6ec7;border:2.5px solid #90c4f7;}
 #bms:has(#r-e1a:checked) .lbl-e1 span,
-#bms:has(#r-e1b:checked) .lbl-e1 span{color:#6aaee0;}
- 
+#bms:has(#r-e1b:checked) .lbl-e1 span{color:#3a8fd4;}
+
 /* 예시2 버튼 */
 #bms:has(#r-e2a:checked) .lbl-e2,
 #bms:has(#r-e2b:checked) .lbl-e2{background:#dceeff;color:#1a6ec7;border:2.5px solid #90c4f7;}
 #bms:has(#r-e2a:checked) .lbl-e2 span,
-#bms:has(#r-e2b:checked) .lbl-e2 span{color:#6aaee0;}
- 
+#bms:has(#r-e2b:checked) .lbl-e2 span{color:#3a8fd4;}
+
 /* 서브탭 노출 */
 #bms:has(#r-e1a:checked) .bms-sub-1,
 #bms:has(#r-e1b:checked) .bms-sub-1{display:flex;}
 #bms:has(#r-e2a:checked) .bms-sub-2,
 #bms:has(#r-e2b:checked) .bms-sub-2{display:flex;}
- 
+
 /* 서브탭 활성 */
 #bms:has(#r-e1a:checked) .lbl-e1a,
 #bms:has(#r-e1b:checked) .lbl-e1b,
 #bms:has(#r-e2a:checked) .lbl-e2a,
 #bms:has(#r-e2b:checked) .lbl-e2b{background:#dceeff;color:#1a6ec7;border:2.5px solid #90c4f7;font-weight:700;}
- 
+
 /* 패널 노출 */
 #bms:has(#r-e1a:checked) .bms-p1a,
 #bms:has(#r-e1b:checked) .bms-p1b,
 #bms:has(#r-e2a:checked) .bms-p2a,
 #bms:has(#r-e2b:checked) .bms-p2b{display:block;}
 </style>
- 
+
 <input type="radio" name="bms-main" id="r-e1a" checked>
 <input type="radio" name="bms-main" id="r-e1b">
 <input type="radio" name="bms-main" id="r-e2a">
 <input type="radio" name="bms-main" id="r-e2b">
- 
+
 <div class="bms-step1">
   <label class="lbl-e1" for="r-e1a">예시 1<span>모든주문금액 할인만 설정한 경우</span></label>
   <label class="lbl-e2" for="r-e2a">예시 2<span>모든주문금액 할인 + 배달팁 할인을 함께 설정한 경우</span></label>
 </div>
- 
+
 <div class="bms-step2 bms-sub-1">
   <label class="lbl-e1a" for="r-e1a">정액할인 (원)</label>
   <label class="lbl-e1b" for="r-e1b">정률할인 (%)</label>
@@ -108,9 +108,9 @@
   <label class="lbl-e2a" for="r-e2a">정액할인 (원)</label>
   <label class="lbl-e2b" for="r-e2b">정률할인 (%)</label>
 </div>
- 
+
 <div class="bms-panels">
- 
+
   <div class="bms-panel bms-p1a">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>3,000원</strong></div></div>
@@ -132,7 +132,7 @@
     </div>
     <div class="bms-note">총 할인금액 3,000원은 동일해요.<br>변경 후 할인금액이 배달팁(2,000원)에 먼저 적용되고, 나머지 1,000원이 주문금액에서 차감돼요.</div>
   </div>
- 
+
   <div class="bms-panel bms-p1b">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>15%</strong></div></div>
@@ -154,7 +154,7 @@
     </div>
     <div class="bms-note">총 할인금액 3,000원은 동일해요 (20,000원의 15%).<br>변경 후 할인금액이 배달팁(2,000원)에 먼저 적용되고, 나머지 1,000원이 주문금액에서 차감돼요.</div>
   </div>
- 
+
   <div class="bms-panel bms-p2a">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>3,000원</strong><br>배달팁 할인 <strong>1,000원</strong></div></div>
@@ -176,7 +176,7 @@
     </div>
     <div class="bms-note">변경 후 할인 적용 순서:<ol><li>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li>모든주문금액 할인이 남은 배달팁에 차감 적용 (1,000원)</li><li>나머지 모든주문금액 할인이 주문금액에 차감 적용 (1,000원)</li></ol></div>
   </div>
- 
+
   <div class="bms-panel bms-p2b">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>15%</strong><br>배달팁 할인 <strong>1,000원</strong></div></div>
@@ -198,5 +198,6 @@
     </div>
     <div class="bms-note">모든주문금액 할인 = 3,000원 (20,000원의 15%)<br><br>변경 후 할인 적용 순서:<ol><li>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li>모든주문금액 할인이 남은 배달팁에 차감 적용 (1,000원)</li><li>나머지 모든주문금액 할인이 주문금액에 차감 적용 (1,000원)</li></ol></div>
   </div>
+
 </div>
 </div>
