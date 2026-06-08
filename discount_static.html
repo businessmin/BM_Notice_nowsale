@@ -89,6 +89,11 @@
 #bms:has(#r-e2a:checked) .lbl-e2a,
 #bms:has(#r-e2b:checked) .lbl-e2b{background:#dceeff;color:#1a6ec7;border:2.5px solid #90c4f7;font-weight:700;}
 
+/* 예시3 버튼 */
+#bms:has(#r-e3:checked) .lbl-e3{background:#dceeff;color:#1a6ec7;border:2.5px solid #90c4f7;}
+#bms:has(#r-e3:checked) .lbl-e3 span{color:#3a8fd4;}
+/* 예시3 패널 노출 */
+#bms:has(#r-e3:checked) .bms-p3{display:block;}
 /* 패널 노출 */
 #bms:has(#r-e1a:checked) .bms-p1a,
 #bms:has(#r-e1b:checked) .bms-p1b,
@@ -100,10 +105,12 @@
 <input type="radio" name="bms-main" id="r-e1b">
 <input type="radio" name="bms-main" id="r-e2a">
 <input type="radio" name="bms-main" id="r-e2b">
+<input type="radio" name="bms-main" id="r-e3">
 
 <div class="bms-step1">
   <label class="lbl-e1" for="r-e1a">예시 1<span>모든주문금액 할인만 설정한 경우</span></label>
   <label class="lbl-e2" for="r-e2a">예시 2<span>모든주문금액 할인 + 배달팁 할인을 함께 설정한 경우</span></label>
+  <label class="lbl-e3" for="r-e3">예시 3<span>배달팁 할인만 설정한 경우</span></label>
 </div>
 
 <div class="bms-step2 bms-sub-1">
@@ -120,7 +127,7 @@
   <div class="bms-panel bms-p1a">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">기존 가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>3,000원</strong></div></div>
-      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인:<br><strong>3,000원</strong></div></div>
+      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인 <strong>3,000원</strong></div></div>
       <div class="bms-setup-row full"><span class="bms-setup-badge order">접수 주문 (알뜰배달)</span><div class="bms-setup-vals">주문금액 <strong>20,000원</strong><br>배달팁 <strong>2,000원</strong></div></div>
     </div>
     <div class="bms-compare">
@@ -137,13 +144,13 @@
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">19,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">총 할인금액 3,000원은 동일<br><br>전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 통합할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
+    <div class="bms-note">전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 통합할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
   </div>
 
   <div class="bms-panel bms-p1b">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">기존 가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>15%</strong></div></div>
-      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인:<br><strong>15%</strong></div></div>
+      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인 <strong>15%</strong></div></div>
       <div class="bms-setup-row full"><span class="bms-setup-badge order">접수 주문 (알뜰배달)</span><div class="bms-setup-vals">주문금액 <strong>20,000원</strong><br>배달팁 <strong>2,000원</strong></div></div>
     </div>
     <div class="bms-compare">
@@ -160,13 +167,13 @@
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">19,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">총 할인금액 3,000원은 동일 (20,000원의 15%)<br><br>전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 통합할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
+    <div class="bms-note">전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 통합할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
   </div>
 
   <div class="bms-panel bms-p2a">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">기존 가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>3,000원</strong><br>배달팁 할인 <strong>1,000원</strong></div></div>
-      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인:<br><strong>4,000원</strong></div></div>
+      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인 <strong>4,000원</strong></div></div>
       <div class="bms-setup-row full"><span class="bms-setup-badge order">접수 주문 (알뜰배달)</span><div class="bms-setup-vals">주문금액 <strong>20,000원</strong><br>배달팁 <strong>2,000원</strong></div></div>
     </div>
     <div class="bms-compare">
@@ -183,13 +190,13 @@
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">18,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">총 할인금액 4,000원은 동일<br>: 1,000원(배달팁 할인) + 3,000원<br><br>전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li><span class="bms-num">②</span>통합할인이 남은 배달팁에 차감 적용 (1,000원)</li><li><span class="bms-num">③</span>나머지 통합할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
+    <div class="bms-note">전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인(1,000원)이 배달팁에 적용</li><li><span class="bms-num">②</span>통합할인이 남은 배달팁에 차감 적용 (1,000원)</li><li><span class="bms-num">③</span>나머지 통합할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
   </div>
 
   <div class="bms-panel bms-p2b">
     <div class="bms-setup">
       <div class="bms-setup-row"><span class="bms-setup-badge store">기존 가게 설정</span><div class="bms-setup-vals">모든주문금액 할인(배민배달) <strong>15%</strong><br>배달팁 할인 <strong>1,000원</strong></div></div>
-      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인:<br><strong>15% + 1,000원</strong></div></div>
+      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인 <strong>15% + 1,000원</strong></div></div>
       <div class="bms-setup-row full"><span class="bms-setup-badge order">접수 주문 (알뜰배달)</span><div class="bms-setup-vals">주문금액 <strong>20,000원</strong><br>배달팁 <strong>2,000원</strong></div></div>
     </div>
     <div class="bms-compare">
@@ -206,7 +213,31 @@
         <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">18,000원</span></div>
       </div>
     </div>
-    <div class="bms-note">총 할인금액 4,000원은 동일<br>: 1,000원(배달팁 할인) + 3,000원(20,000원의 15%)<br><br>전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>설정한 배달팁 할인(1,000원)이 배달팁에 적용</li><li><span class="bms-num">②</span>통합할인이 남은 배달팁에 차감 적용 (1,000원)</li><li><span class="bms-num">③</span>나머지 통합할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
+    <div class="bms-note">전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인(1,000원)이 배달팁에 적용</li><li><span class="bms-num">②</span>통합할인이 남은 배달팁에 차감 적용 (1,000원)</li><li><span class="bms-num">③</span>나머지 통합할인이 주문금액에 차감 적용 (2,000원)</li></ol></div>
+  </div>
+
+  <!-- 예시3 -->
+  <div class="bms-panel bms-p3">
+    <div class="bms-setup">
+      <div class="bms-setup-row"><span class="bms-setup-badge store">기존 가게 설정</span><div class="bms-setup-vals">배달팁 할인 <strong>3,000원</strong></div></div>
+      <div class="bms-setup-row"><span class="bms-setup-badge unified">배민배달 통합할인 전환</span><div class="bms-setup-vals">통합할인 <strong>3,000원</strong></div></div>
+      <div class="bms-setup-row full"><span class="bms-setup-badge order">접수 주문 (알뜰배달)</span><div class="bms-setup-vals">주문금액 <strong>20,000원</strong><br>배달팁 <strong>2,000원</strong></div></div>
+    </div>
+    <div class="bms-compare">
+      <div class="bms-box before">
+        <div class="bms-box-head">기존</div>
+        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 2,000</span></div></div></div>
+        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">20,000원</span><span class="bms-rsub">&nbsp;</span></div></div>
+        <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">20,000원</span></div>
+      </div>
+      <div class="bms-box after">
+        <div class="bms-box-head">전환 후</div>
+        <div class="bms-row"><span class="bms-rname">배달팁</span><div class="bms-rright"><div class="bms-zero-wrap"><span class="bms-zero">0원</span><span class="bms-zero-sub">2,000 - 2,000<span class="bms-row-num">①</span></span></div></div></div>
+        <div class="bms-row"><span class="bms-rname">주문금액</span><div class="bms-rright"><span class="bms-rval">19,000원</span><span class="bms-rsub">20,000 - 1,000<span class="bms-row-num">②</span></span></div></div>
+        <div class="bms-total"><span class="bms-tlabel">총 결제금액</span><span class="bms-tval">19,000원</span></div>
+      </div>
+    </div>
+    <div class="bms-note">전환 후 할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 통합할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
   </div>
 
 </div>
