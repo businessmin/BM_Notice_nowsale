@@ -4,20 +4,15 @@
 #bms *{box-sizing:border-box;margin:0;padding:0;}
 #bms input[type=radio]{position:absolute;opacity:0;pointer-events:none;}
 
-/* 탭 버튼 */
 #bms .bms-tabs{display:flex;gap:8px;margin-bottom:12px;}
 #bms .bms-tabs label{flex:1;display:block;padding:11px 14px;border-radius:10px;border:1.5px solid #e0e0e0;font-size:14px;font-weight:600;color:#aaa;cursor:pointer;background:#fff;transition:all .15s;text-align:center;}
-
-/* 탭 활성 */
 #bms:has(#r-alttl:checked) .lbl-alttl,
 #bms:has(#r-hanjip:checked) .lbl-hanjip{background:#dceeff;color:#1a6ec7;border:2.5px solid #90c4f7;font-weight:700;}
 
-/* 패널 */
 #bms .bms-panel{display:none;}
 #bms:has(#r-alttl:checked) .bms-alttl{display:block;}
 #bms:has(#r-hanjip:checked) .bms-hanjip{display:block;}
 
-/* 가게설정/주문 */
 #bms .bms-setup{background:#fafafa;border:1px solid #efefef;border-radius:10px;padding:12px 14px;margin-bottom:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 #bms .bms-setup-row{display:flex;flex-direction:column;gap:3px;}
 #bms .bms-setup-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:4px;margin-bottom:2px;}
@@ -28,7 +23,6 @@
 #bms .bms-setup-vals{font-size:14px;color:#333;line-height:1.7;padding-left:2px;}
 #bms .bms-setup-vals strong{font-weight:700;color:#1a1a1a;}
 
-/* 비교 박스 */
 #bms .bms-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
 #bms .bms-box{border-radius:10px;padding:12px 13px;}
 #bms .bms-box.before{background:#f7f7f7;border:1.5px solid #cccccc;}
@@ -50,17 +44,13 @@
 #bms .bms-tlabel{font-size:13px;color:#aaa;}
 #bms .bms-tval{font-size:18px;font-weight:800;color:#1a1a1a;}
 
-/* 하단 카드 */
 #bms .bms-note{font-size:13px;color:#444;font-weight:600;padding:12px 14px;background:#f9f9f9;border-radius:8px;border-left:3px solid #d8d8d8;line-height:2.0;}
 #bms .bms-note ol{list-style:none;padding-left:0;margin-top:6px;}
 #bms .bms-note li{margin-bottom:4px;display:flex;align-items:flex-start;gap:5px;}
-#bms .bms-note .bms-note-sub{font-size:12px;color:#999;font-weight:400;padding-left:25px;margin-top:-2px;margin-bottom:4px;line-height:1.6;}
+#bms .bms-note li.bms-note-sub{font-size:12px;color:#999;font-weight:400;padding-left:25px;margin-top:-2px;display:block;}
 #bms .bms-num{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;background:#d8eeff;color:#1a6ec7;border-radius:50%;font-size:11px;font-weight:700;margin-top:2px;flex-shrink:0;}
 #bms .bms-row-num{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;background:#d8eeff;color:#1a6ec7;border-radius:50%;font-size:10px;font-weight:700;flex-shrink:0;}
 
-#bms .bms-fee{margin-top:12px;padding:14px 16px;background:#fffbf0;border:1.5px solid #f5d87a;border-radius:10px;font-size:13px;color:#555;line-height:2.0;}
-#bms .bms-fee-title{font-size:12px;font-weight:700;color:#b8860b;letter-spacing:.03em;margin-bottom:8px;}
-#bms .bms-fee-highlight{font-size:15px;font-weight:800;color:#1a1a1a;margin-top:4px;}
 @media(max-width:460px){
   #bms .bms-compare{grid-template-columns:1fr;}
 }
@@ -74,7 +64,7 @@
   <label class="lbl-hanjip" for="r-hanjip">한집배달</label>
 </div>
 
-<!-- 알뜰배달 패널 -->
+<!-- 알뜰배달 -->
 <div class="bms-panel bms-alttl">
   <div class="bms-setup">
     <div class="bms-setup-row"><span class="bms-setup-badge store">기존 모든주문금액 할인(배민배달)</span><div class="bms-setup-vals">할인금액 <strong>3,000원</strong></div></div>
@@ -96,15 +86,9 @@
     </div>
   </div>
   <div class="bms-note">통합할인 후 적용 순서<ol><li><span class="bms-num">①</span>통합할인이 배달팁(2,000원)에 먼저 적용</li><li><span class="bms-num">②</span>나머지 통합할인이 주문금액에서 차감 적용(1,000원)</li></ol></div>
-  <div class="bms-fee">
-    <div class="bms-fee-title">7/13 이후 중개이용료 및 기타 수수료 계산 방법</div>
-    원 주문금액 20,000원에서<br>
-    통합할인(배달팁 할인+주문금액 할인) 3,000원을 제외한<br><br>
-    <div class="bms-fee-highlight">17,000원을 기준으로 중개이용료 및 기타 수수료 계산</div>
-  </div>
 </div>
 
-<!-- 한집배달 패널 -->
+<!-- 한집배달 -->
 <div class="bms-panel bms-hanjip">
   <div class="bms-setup">
     <div class="bms-setup-row"><span class="bms-setup-badge store">기존 모든주문금액 할인(배민배달)</span><div class="bms-setup-vals">할인금액 <strong>3,000원</strong></div></div>
@@ -126,12 +110,6 @@
     </div>
   </div>
   <div class="bms-note">통합할인 적용 순서<ol><li><span class="bms-num">①</span>통합할인이 배달팁에 먼저 적용(1,000원)</li><li class="bms-note-sub">※ 고객부담 배달팁 1,000원을 남기고 적용</li><li><span class="bms-num">②</span>나머지 통합할인이 주문금액에서 차감 적용(2,000원)</li></ol></div>
-  <div class="bms-fee">
-    <div class="bms-fee-title">7/13 이후 중개이용료 및 기타 수수료 계산 방법</div>
-    원 주문금액 20,000원에서<br>
-    통합할인(배달팁 할인+주문금액 할인) 3,000원을 제외한<br><br>
-    <div class="bms-fee-highlight">17,000원을 기준으로 중개이용료 계산</div>
-  </div>
 </div>
 
 </div>
